@@ -1,0 +1,16 @@
+C:\PROG1965\Assignments\Assinment_1\Assinment_1\obj\Debug\net8.0-windows\Assinment_1.csproj.GenerateResource.cache
+C:\PROG1965\Assignments\Assinment_1\Assinment_1\obj\Debug\net8.0-windows\Assinment_1.GeneratedMSBuildEditorConfig.editorconfig
+C:\PROG1965\Assignments\Assinment_1\Assinment_1\obj\Debug\net8.0-windows\Assinment_1.AssemblyInfoInputs.cache
+C:\PROG1965\Assignments\Assinment_1\Assinment_1\obj\Debug\net8.0-windows\Assinment_1.AssemblyInfo.cs
+C:\PROG1965\Assignments\Assinment_1\Assinment_1\obj\Debug\net8.0-windows\Assinment_1.csproj.CoreCompileInputs.cache
+C:\PROG1965\Assignments\Assinment_1\Assinment_1\bin\Debug\net8.0-windows\Assinment_1.exe
+C:\PROG1965\Assignments\Assinment_1\Assinment_1\bin\Debug\net8.0-windows\Assinment_1.deps.json
+C:\PROG1965\Assignments\Assinment_1\Assinment_1\bin\Debug\net8.0-windows\Assinment_1.runtimeconfig.json
+C:\PROG1965\Assignments\Assinment_1\Assinment_1\bin\Debug\net8.0-windows\Assinment_1.dll
+C:\PROG1965\Assignments\Assinment_1\Assinment_1\bin\Debug\net8.0-windows\Assinment_1.pdb
+C:\PROG1965\Assignments\Assinment_1\Assinment_1\obj\Debug\net8.0-windows\Assinment_1.dll
+C:\PROG1965\Assignments\Assinment_1\Assinment_1\obj\Debug\net8.0-windows\refint\Assinment_1.dll
+C:\PROG1965\Assignments\Assinment_1\Assinment_1\obj\Debug\net8.0-windows\Assinment_1.pdb
+C:\PROG1965\Assignments\Assinment_1\Assinment_1\obj\Debug\net8.0-windows\Assinment_1.genruntimeconfig.cache
+C:\PROG1965\Assignments\Assinment_1\Assinment_1\obj\Debug\net8.0-windows\ref\Assinment_1.dll
+C:\PROG1965\Assignments\Assinment_1\Assinment_1\obj\Debug\net8.0-windows\Assinment_1.BookSeatApp.resources
