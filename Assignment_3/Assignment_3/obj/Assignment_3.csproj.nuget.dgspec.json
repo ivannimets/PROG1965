@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\broke\\OneDrive\\Desktop\\PROGRAMMING2\\assignments\\PROG1965\\Assignment_3\\Assignment_3\\Assignment_3.csproj": {}
+    "C:\\PROG1965\\Assignment_3\\Assignment_3\\Assignment_3.csproj": {}
   },
   "projects": {
-    "C:\\Users\\broke\\OneDrive\\Desktop\\PROGRAMMING2\\assignments\\PROG1965\\Assignment_3\\Assignment_3\\Assignment_3.csproj": {
+    "C:\\PROG1965\\Assignment_3\\Assignment_3\\Assignment_3.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\broke\\OneDrive\\Desktop\\PROGRAMMING2\\assignments\\PROG1965\\Assignment_3\\Assignment_3\\Assignment_3.csproj",
+        "projectUniqueName": "C:\\PROG1965\\Assignment_3\\Assignment_3\\Assignment_3.csproj",
         "projectName": "Assignment_3",
-        "projectPath": "C:\\Users\\broke\\OneDrive\\Desktop\\PROGRAMMING2\\assignments\\PROG1965\\Assignment_3\\Assignment_3\\Assignment_3.csproj",
-        "packagesPath": "C:\\Users\\broke\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\broke\\OneDrive\\Desktop\\PROGRAMMING2\\assignments\\PROG1965\\Assignment_3\\Assignment_3\\obj\\",
+        "projectPath": "C:\\PROG1965\\Assignment_3\\Assignment_3\\Assignment_3.csproj",
+        "packagesPath": "C:\\Users\\maiso\\.nuget\\packages\\",
+        "outputPath": "C:\\PROG1965\\Assignment_3\\Assignment_3\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\broke\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\maiso\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -58,7 +58,7 @@
               "privateAssets": "none"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.101/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.100/PortableRuntimeIdentifierGraph.json"
         }
       }
     }
