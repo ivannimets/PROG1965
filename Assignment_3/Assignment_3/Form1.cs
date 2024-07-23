@@ -6,5 +6,12 @@ namespace Assignment_3
         {
             InitializeComponent();
         }
+
+
+        //method to switch between modes:
+        private void ChangeMode(string mode)  // valid parameters: 
+        {
+
+        }
     }
 }
