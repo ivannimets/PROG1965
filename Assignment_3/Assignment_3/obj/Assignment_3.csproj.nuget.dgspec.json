@@ -1,24 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\PROG1965\\Assignments\\Assignment_3\\Assignment_3\\Assignment_3\\Assignment_3.csproj": {}
+    "C:\\Users\\broke\\OneDrive\\Desktop\\PROGRAMMING2\\assignments\\PROG1965\\Assignment_3\\Assignment_3\\Assignment_3.csproj": {}
   },
   "projects": {
-    "C:\\PROG1965\\Assignments\\Assignment_3\\Assignment_3\\Assignment_3\\Assignment_3.csproj": {
+    "C:\\Users\\broke\\OneDrive\\Desktop\\PROGRAMMING2\\assignments\\PROG1965\\Assignment_3\\Assignment_3\\Assignment_3.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\PROG1965\\Assignments\\Assignment_3\\Assignment_3\\Assignment_3\\Assignment_3.csproj",
+        "projectUniqueName": "C:\\Users\\broke\\OneDrive\\Desktop\\PROGRAMMING2\\assignments\\PROG1965\\Assignment_3\\Assignment_3\\Assignment_3.csproj",
         "projectName": "Assignment_3",
-        "projectPath": "C:\\PROG1965\\Assignments\\Assignment_3\\Assignment_3\\Assignment_3\\Assignment_3.csproj",
-        "packagesPath": "C:\\Users\\ivann\\.nuget\\packages\\",
-        "outputPath": "C:\\PROG1965\\Assignments\\Assignment_3\\Assignment_3\\Assignment_3\\obj\\",
+        "projectPath": "C:\\Users\\broke\\OneDrive\\Desktop\\PROGRAMMING2\\assignments\\PROG1965\\Assignment_3\\Assignment_3\\Assignment_3.csproj",
+        "packagesPath": "C:\\Users\\broke\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\broke\\OneDrive\\Desktop\\PROGRAMMING2\\assignments\\PROG1965\\Assignment_3\\Assignment_3\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-        ],
         "configFilePaths": [
-          "C:\\Users\\ivann\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Users\\broke\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
