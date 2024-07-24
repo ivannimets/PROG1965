@@ -32,7 +32,16 @@
             listBoxNotes = new ListBox();
             lblMessage = new Label();
             groupBoxForm = new GroupBox();
-            dateTimePicker1 = new DateTimePicker();
+            btnDeleteNote = new Button();
+            btnUpdateNote = new Button();
+            btnAddNote = new Button();
+            richTextBoxNotes = new RichTextBox();
+            lblNotes = new Label();
+            listBoxBPMeasurements = new ListBox();
+            lblBPMeasurements = new Label();
+            listBoxProblems = new ListBox();
+            lblProblems = new Label();
+            datePickerDateOfBirth = new DateTimePicker();
             btnAddProblem = new Button();
             txtNewProblem = new TextBox();
             lblNewProblem = new Label();
@@ -41,15 +50,7 @@
             lblPatientName = new Label();
             txtNoteID = new TextBox();
             label1 = new Label();
-            lblProblems = new Label();
-            listBoxProblems = new ListBox();
-            lblBPMeasurements = new Label();
-            listBoxBPMeasurements = new ListBox();
-            lblNotes = new Label();
-            richTextBoxNotes = new RichTextBox();
-            btnAddNote = new Button();
-            btnUpdateNote = new Button();
-            btnDeleteNote = new Button();
+            btnRemoveProblem = new Button();
             groupBoxForm.SuspendLayout();
             SuspendLayout();
             // 
@@ -81,6 +82,7 @@
             // 
             // groupBoxForm
             // 
+            groupBoxForm.Controls.Add(btnRemoveProblem);
             groupBoxForm.Controls.Add(btnDeleteNote);
             groupBoxForm.Controls.Add(btnUpdateNote);
             groupBoxForm.Controls.Add(btnAddNote);
@@ -90,7 +92,7 @@
             groupBoxForm.Controls.Add(lblBPMeasurements);
             groupBoxForm.Controls.Add(listBoxProblems);
             groupBoxForm.Controls.Add(lblProblems);
-            groupBoxForm.Controls.Add(dateTimePicker1);
+            groupBoxForm.Controls.Add(datePickerDateOfBirth);
             groupBoxForm.Controls.Add(btnAddProblem);
             groupBoxForm.Controls.Add(txtNewProblem);
             groupBoxForm.Controls.Add(lblNewProblem);
@@ -106,14 +108,92 @@
             groupBoxForm.TabStop = false;
             groupBoxForm.Text = "Add/Edit/Delete Encouter Note:";
             // 
-            // dateTimePicker1
+            // btnDeleteNote
             // 
-            dateTimePicker1.CustomFormat = "dd MMM yyyy";
-            dateTimePicker1.Format = DateTimePickerFormat.Custom;
-            dateTimePicker1.Location = new Point(130, 142);
-            dateTimePicker1.Name = "dateTimePicker1";
-            dateTimePicker1.Size = new Size(324, 27);
-            dateTimePicker1.TabIndex = 8;
+            btnDeleteNote.Location = new Point(280, 543);
+            btnDeleteNote.Name = "btnDeleteNote";
+            btnDeleteNote.Size = new Size(125, 29);
+            btnDeleteNote.TabIndex = 17;
+            btnDeleteNote.Text = "Delete Note";
+            btnDeleteNote.UseVisualStyleBackColor = true;
+            // 
+            // btnUpdateNote
+            // 
+            btnUpdateNote.Location = new Point(149, 543);
+            btnUpdateNote.Name = "btnUpdateNote";
+            btnUpdateNote.Size = new Size(125, 29);
+            btnUpdateNote.TabIndex = 16;
+            btnUpdateNote.Text = "Update Note";
+            btnUpdateNote.UseVisualStyleBackColor = true;
+            // 
+            // btnAddNote
+            // 
+            btnAddNote.Location = new Point(18, 543);
+            btnAddNote.Name = "btnAddNote";
+            btnAddNote.Size = new Size(125, 29);
+            btnAddNote.TabIndex = 15;
+            btnAddNote.Text = "Add Note";
+            btnAddNote.UseVisualStyleBackColor = true;
+            // 
+            // richTextBoxNotes
+            // 
+            richTextBoxNotes.Location = new Point(18, 269);
+            richTextBoxNotes.Name = "richTextBoxNotes";
+            richTextBoxNotes.Size = new Size(805, 259);
+            richTextBoxNotes.TabIndex = 14;
+            richTextBoxNotes.Text = "";
+            // 
+            // lblNotes
+            // 
+            lblNotes.AutoSize = true;
+            lblNotes.Location = new Point(18, 246);
+            lblNotes.Name = "lblNotes";
+            lblNotes.Size = new Size(51, 20);
+            lblNotes.TabIndex = 13;
+            lblNotes.Text = "Notes:";
+            // 
+            // listBoxBPMeasurements
+            // 
+            listBoxBPMeasurements.FormattingEnabled = true;
+            listBoxBPMeasurements.Location = new Point(639, 68);
+            listBoxBPMeasurements.Name = "listBoxBPMeasurements";
+            listBoxBPMeasurements.Size = new Size(184, 164);
+            listBoxBPMeasurements.TabIndex = 12;
+            // 
+            // lblBPMeasurements
+            // 
+            lblBPMeasurements.AutoSize = true;
+            lblBPMeasurements.Location = new Point(639, 45);
+            lblBPMeasurements.Name = "lblBPMeasurements";
+            lblBPMeasurements.Size = new Size(129, 20);
+            lblBPMeasurements.TabIndex = 11;
+            lblBPMeasurements.Text = "BP Measurements:";
+            // 
+            // listBoxProblems
+            // 
+            listBoxProblems.FormattingEnabled = true;
+            listBoxProblems.Location = new Point(479, 68);
+            listBoxProblems.Name = "listBoxProblems";
+            listBoxProblems.Size = new Size(132, 144);
+            listBoxProblems.TabIndex = 10;
+            // 
+            // lblProblems
+            // 
+            lblProblems.AutoSize = true;
+            lblProblems.Location = new Point(479, 45);
+            lblProblems.Name = "lblProblems";
+            lblProblems.Size = new Size(74, 20);
+            lblProblems.TabIndex = 9;
+            lblProblems.Text = "Problems:";
+            // 
+            // datePickerDateOfBirth
+            // 
+            datePickerDateOfBirth.CustomFormat = "dd MMM yyyy";
+            datePickerDateOfBirth.Format = DateTimePickerFormat.Custom;
+            datePickerDateOfBirth.Location = new Point(130, 142);
+            datePickerDateOfBirth.Name = "datePickerDateOfBirth";
+            datePickerDateOfBirth.Size = new Size(324, 27);
+            datePickerDateOfBirth.TabIndex = 8;
             // 
             // btnAddProblem
             // 
@@ -181,83 +261,14 @@
             label1.TabIndex = 0;
             label1.Text = "Note ID:";
             // 
-            // lblProblems
+            // btnRemoveProblem
             // 
-            lblProblems.AutoSize = true;
-            lblProblems.Location = new Point(479, 45);
-            lblProblems.Name = "lblProblems";
-            lblProblems.Size = new Size(74, 20);
-            lblProblems.TabIndex = 9;
-            lblProblems.Text = "Problems:";
-            // 
-            // listBoxProblems
-            // 
-            listBoxProblems.FormattingEnabled = true;
-            listBoxProblems.Location = new Point(479, 68);
-            listBoxProblems.Name = "listBoxProblems";
-            listBoxProblems.Size = new Size(157, 164);
-            listBoxProblems.TabIndex = 10;
-            // 
-            // lblBPMeasurements
-            // 
-            lblBPMeasurements.AutoSize = true;
-            lblBPMeasurements.Location = new Point(666, 45);
-            lblBPMeasurements.Name = "lblBPMeasurements";
-            lblBPMeasurements.Size = new Size(129, 20);
-            lblBPMeasurements.TabIndex = 11;
-            lblBPMeasurements.Text = "BP Measurements:";
-            // 
-            // listBoxBPMeasurements
-            // 
-            listBoxBPMeasurements.FormattingEnabled = true;
-            listBoxBPMeasurements.Location = new Point(666, 68);
-            listBoxBPMeasurements.Name = "listBoxBPMeasurements";
-            listBoxBPMeasurements.Size = new Size(157, 164);
-            listBoxBPMeasurements.TabIndex = 12;
-            // 
-            // lblNotes
-            // 
-            lblNotes.AutoSize = true;
-            lblNotes.Location = new Point(18, 246);
-            lblNotes.Name = "lblNotes";
-            lblNotes.Size = new Size(51, 20);
-            lblNotes.TabIndex = 13;
-            lblNotes.Text = "Notes:";
-            // 
-            // richTextBoxNotes
-            // 
-            richTextBoxNotes.Location = new Point(18, 269);
-            richTextBoxNotes.Name = "richTextBoxNotes";
-            richTextBoxNotes.Size = new Size(805, 259);
-            richTextBoxNotes.TabIndex = 14;
-            richTextBoxNotes.Text = "";
-            // 
-            // btnAddNote
-            // 
-            btnAddNote.Location = new Point(18, 543);
-            btnAddNote.Name = "btnAddNote";
-            btnAddNote.Size = new Size(125, 29);
-            btnAddNote.TabIndex = 15;
-            btnAddNote.Text = "Add Note";
-            btnAddNote.UseVisualStyleBackColor = true;
-            // 
-            // btnUpdateNote
-            // 
-            btnUpdateNote.Location = new Point(149, 543);
-            btnUpdateNote.Name = "btnUpdateNote";
-            btnUpdateNote.Size = new Size(125, 29);
-            btnUpdateNote.TabIndex = 16;
-            btnUpdateNote.Text = "Update Note";
-            btnUpdateNote.UseVisualStyleBackColor = true;
-            // 
-            // btnDeleteNote
-            // 
-            btnDeleteNote.Location = new Point(280, 543);
-            btnDeleteNote.Name = "btnDeleteNote";
-            btnDeleteNote.Size = new Size(125, 29);
-            btnDeleteNote.TabIndex = 17;
-            btnDeleteNote.Text = "Delete Note";
-            btnDeleteNote.UseVisualStyleBackColor = true;
+            btnRemoveProblem.Location = new Point(479, 218);
+            btnRemoveProblem.Name = "btnRemoveProblem";
+            btnRemoveProblem.Size = new Size(132, 29);
+            btnRemoveProblem.TabIndex = 18;
+            btnRemoveProblem.Text = "Remove Problem";
+            btnRemoveProblem.UseVisualStyleBackColor = true;
             // 
             // Form1
             // 
@@ -289,7 +300,7 @@
         private Label lblPatientName;
         private TextBox txtNewProblem;
         private Label lblNewProblem;
-        private DateTimePicker dateTimePicker1;
+        private DateTimePicker datePickerDateOfBirth;
         private Button btnAddProblem;
         private ListBox listBoxProblems;
         private Label lblProblems;
@@ -300,5 +311,6 @@
         private Button btnUpdateNote;
         private Button btnAddNote;
         private RichTextBox richTextBoxNotes;
+        private Button btnRemoveProblem;
     }
 }
