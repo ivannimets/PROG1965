@@ -32,6 +32,7 @@
             listBoxNotes = new ListBox();
             lblMessage = new Label();
             groupBoxForm = new GroupBox();
+            btnRemoveProblem = new Button();
             btnDeleteNote = new Button();
             btnUpdateNote = new Button();
             btnAddNote = new Button();
@@ -50,7 +51,6 @@
             lblPatientName = new Label();
             txtNoteID = new TextBox();
             label1 = new Label();
-            btnRemoveProblem = new Button();
             groupBoxForm.SuspendLayout();
             SuspendLayout();
             // 
@@ -107,6 +107,15 @@
             groupBoxForm.TabIndex = 3;
             groupBoxForm.TabStop = false;
             groupBoxForm.Text = "Add/Edit/Delete Encouter Note:";
+            // 
+            // btnRemoveProblem
+            // 
+            btnRemoveProblem.Location = new Point(479, 218);
+            btnRemoveProblem.Name = "btnRemoveProblem";
+            btnRemoveProblem.Size = new Size(132, 29);
+            btnRemoveProblem.TabIndex = 18;
+            btnRemoveProblem.Text = "Remove Problem";
+            btnRemoveProblem.UseVisualStyleBackColor = true;
             // 
             // btnDeleteNote
             // 
@@ -261,15 +270,6 @@
             label1.TabIndex = 0;
             label1.Text = "Note ID:";
             // 
-            // btnRemoveProblem
-            // 
-            btnRemoveProblem.Location = new Point(479, 218);
-            btnRemoveProblem.Name = "btnRemoveProblem";
-            btnRemoveProblem.Size = new Size(132, 29);
-            btnRemoveProblem.TabIndex = 18;
-            btnRemoveProblem.Text = "Remove Problem";
-            btnRemoveProblem.UseVisualStyleBackColor = true;
-            // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
@@ -281,6 +281,7 @@
             Controls.Add(btnStartNewNote);
             Name = "Form1";
             Text = "Form1";
+            Load += Form1_Load;
             groupBoxForm.ResumeLayout(false);
             groupBoxForm.PerformLayout();
             ResumeLayout(false);
