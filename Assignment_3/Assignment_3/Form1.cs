@@ -20,7 +20,7 @@ namespace Assignment_3
                     datePickerDateOfBirth.Enabled = false;
                     txtNewProblem.Enabled = false;
                     btnAddProblem.Enabled = false;
-                    richTextBoxNotes.Enabled = false;
+                    richTextBoxNotes.Enabled = false; 
                     btnAddNote.Enabled = false;
                     btnUpdateNote.Enabled = false; //this is fun
                     btnDeleteNote.Enabled = false;
@@ -60,7 +60,7 @@ namespace Assignment_3
                     btnAddProblem.Enabled = true;
                     richTextBoxNotes.Enabled = true;
                     btnAddNote.Enabled = true;
-                    btnUpdateNote.Enabled = false ;
+                    btnUpdateNote.Enabled = false;
                     btnDeleteNote.Enabled = false;
                     btnRemoveProblem.Enabled = true;
 
@@ -75,14 +75,20 @@ namespace Assignment_3
                     break;
 
                 default:
-                    throw new NotImplementedException("Mode did not found");
+                    throw new NotImplementedException("Mode was not found");
 
             }
         }
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            ChangeMode("awaiting note mode"); // When form loading it is turning into "Avaiting note mode"
+            ChangeMode("awaiting note mode"); // When form loading it is turning into "Awaiting note mode"
+        }
+
+        private void richTextBoxNotes_TextChanged(object sender, EventArgs e) //this function will get called with every text change on the textbox
+        {
+            string notes = richTextBoxNotes.Text;
+            VitalsParser.UpdateVitalsList(richTextBoxNotes.Text, listBoxBPMeasurements);// update the vitals listbox if data from textbox matches          
         }
     }
 }
