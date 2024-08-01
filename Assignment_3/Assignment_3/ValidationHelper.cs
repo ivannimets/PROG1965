@@ -20,7 +20,7 @@ namespace Assignment_3
             }
             if (!regex.IsMatch(patientName))
             {
-                throw new ArgumentException(@$"Invalid patient name input: {patientName} \n Valid ex: jane doe ");
+                throw new ArgumentException(@$"Invalid patient name input: {patientName}. Valid ex: jane doe ");
             }
         }
 
@@ -28,27 +28,25 @@ namespace Assignment_3
         {
             if (birthDate > DateTime.UtcNow)
             {
-                throw new ArgumentException("Invalid birthdate input! It can not be in the future");
+                throw new ArgumentException(@$"Invalid birthdate input! It can not be in the future");
             }
         }
 
         public static void IsValidProblem(string problem) //null checker for adding problem ...
         {                                                 //we could probably instead do a null checker when calling the add function and not throw an error
-            if (!string.IsNullOrEmpty(problem))
+            if (string.IsNullOrEmpty(problem))
             {
-                throw new ArgumentNullException("problem can not be empty");
+                throw new ArgumentNullException(@$"problem can not be empty");
             }
         }
 
-        
-
-
-
-
-
-
-
-
+        public static void IsValidNotes(string notes) //null checker for notes ...
+        {                                                 //we could probably instead do a null checker when calling the add function and not throw an error
+            if (string.IsNullOrEmpty(notes))
+            {
+                throw new ArgumentNullException(@$"note can not be empty");
+            }
+        }
 
     }
 }
