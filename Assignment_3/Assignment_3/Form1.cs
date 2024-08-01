@@ -22,7 +22,7 @@ namespace Assignment_3
                     btnAddProblem.Enabled = false;
                     richTextBoxNotes.Enabled = false;
                     btnAddNote.Enabled = false;
-                    btnUpdateNote.Enabled = false; //this is fun
+                    btnUpdateNote.Enabled = false;
                     btnDeleteNote.Enabled = false;
                     btnRemoveProblem.Enabled = false;
 
