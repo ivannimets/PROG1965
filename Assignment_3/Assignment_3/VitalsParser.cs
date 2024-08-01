@@ -13,13 +13,16 @@ namespace Assignment_3
         {
             vitalsListBox.Items.Clear();
             CheckForBp(notes, vitalsListBox);
+            CheckForHeartRate(notes, vitalsListBox);
+            CheckForRespiratoryRate(notes, vitalsListBox);
+            CheckForTemperature(notes, vitalsListBox);
         }
 
         private static void CheckForBp(string notes, ListBox vitalsListBox) 
         {
             string bpPattern = @"BP:?\s(\d{2,3})/(\d{2,3})";
             Regex bpRegex = new Regex(bpPattern, RegexOptions.IgnoreCase);
-            MatchCollection matches = bpRegex.Matches(notes); // creates an array of matches for given string 
+            MatchCollection matches = bpRegex.Matches(notes); // creates a collection of matches for given string 
 
             foreach (Match match in matches) 
             {
@@ -40,5 +43,83 @@ namespace Assignment_3
             }
                 return $"BP: {systolic}/{diastolic}";
         }
+
+        private static void CheckForHeartRate(string notes, ListBox vitalsListBox) // check listbox for matching regex string
+        {
+            string HRPattern = @"HR:?\s(\d{2,3})";
+            Regex HRRegex = new Regex (HRPattern, RegexOptions.IgnoreCase);
+            MatchCollection matches = HRRegex.Matches(notes); //store matches in collection
+
+            foreach (Match match in matches)
+            {
+                int heartRate = int.Parse(match.Groups[1].Value); 
+                vitalsListBox.Items.Add(UpdateHeartRateString(heartRate));
+            }
+        }
+
+        private static string UpdateHeartRateString(int heartRate)
+        {
+            if (heartRate > 100)
+            {
+                return $"HR: {heartRate} BPM (HIGH)";
+            }
+            if (heartRate < 60)
+            {
+                return $"HR: {heartRate} BPM (LOW)";
+            }
+            return $"HR: {heartRate} BPM";
+        }
+
+        private static void CheckForRespiratoryRate(string notes, ListBox vitalsListBox)
+        {
+            string RRPattern = @"RR:?\s(\d{2,3})";
+            Regex RRregex = new Regex (RRPattern, RegexOptions.IgnoreCase);
+            MatchCollection match = RRregex.Matches(notes);
+
+            foreach(Match matches in match)
+            {
+                int respiratory = int.Parse(matches.Groups[1].Value);
+                vitalsListBox.Items.Add(UpdaterespiratoryRateString(respiratory));
+            }
+        }
+
+        private static string UpdaterespiratoryRateString(int respiratory)
+        {
+            if (respiratory > 100)
+            {
+                return $"RR: {respiratory} (HIGH)";
+            }
+            if (respiratory < 60)
+            {
+                return $"RR: {respiratory} (LOW)";
+            }
+            return $"RR: {respiratory}";
+        }
+
+        private static void CheckForTemperature(string notes, ListBox vitalsListBox)
+        {
+            string TempPattern = @"T:?\s(\d{2,3})";
+            Regex TempRegex = new Regex (TempPattern, RegexOptions.IgnoreCase);
+            MatchCollection match = TempRegex.Matches(notes);
+
+            foreach(Match matches in match)
+            {
+                double temp = double.Parse(matches.Groups[1].Value);
+                vitalsListBox.Items.Add(UpdateTempString(temp));
+            }
+        }
+        private static string UpdateTempString(double temp)
+        {
+            if (temp > 37.2)
+            {
+                return $"Temp: {temp} (HIGH)";
+            }
+            if (temp < 36.5)
+            {
+                return $"Temp: {temp} (LOW)";
+            }
+             return $"Temp: {temp}";
+        }
+
     }
 }

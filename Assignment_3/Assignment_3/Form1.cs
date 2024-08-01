@@ -20,7 +20,7 @@ namespace Assignment_3
                     datePickerDateOfBirth.Enabled = false;
                     txtNewProblem.Enabled = false;
                     btnAddProblem.Enabled = false;
-                    richTextBoxNotes.Enabled = false; 
+                    richTextBoxNotes.Enabled = true; 
                     btnAddNote.Enabled = false;
                     btnUpdateNote.Enabled = false; //this is fun
                     btnDeleteNote.Enabled = false;
