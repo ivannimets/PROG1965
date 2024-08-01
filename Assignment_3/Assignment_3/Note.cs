@@ -8,22 +8,23 @@ namespace Assignment_3
 {
     internal class Note
     {
-        private int noteId;
+        private string noteId;
         private string patientName;
         private DateTime dateOfBirth;
         private string notes;
         private List<string> problems;
+        public string nameToShow;
 
-        public Note(int noteId, string patientName, DateTime dateOfBirth, string notes, List<string> problems)
+        public Note(string noteId, string patientName, DateTime dateOfBirth, string notes, List<string> problems)
         {
             SetNoteId(noteId);
             SetPatientName(patientName);
             SetDateOfBirth(dateOfBirth);
             SetNotes(notes);
-            this.problems = problems;
+            SetProblems(problems);
         }
 
-        public void SetNoteId(int noteId)
+        public void SetNoteId(string noteId)
         {
             this.noteId = noteId;
         }
@@ -63,19 +64,52 @@ namespace Assignment_3
             }
         }
 
+        public void SetProblems(List<string> problems)
+        {
+            this.problems = new List<string>(); 
+            foreach (string problem in problems)
+            {
+                if (!String.IsNullOrEmpty(problem))
+                {
+                    this.problems.Add(problem);
+                }
+            }
+        }
+
         public string GetPatientName()
         {
             return this.patientName;
         }
 
-        public int GetNoteId()
+        public string GetNoteId()
         {
             return this.noteId;
         }
 
+        public DateTime GetDateOfBirth()
+        {
+            return (DateTime)this.dateOfBirth;
+        }
+
+        public string GetNotes()
+        {
+            return this.notes;
+        }
+
+        public string GetProblemsAsString ()
+        {
+            string problems = "";
+            for (int i = 0; i < this.problems.Count; i++)
+            {
+                problems += this.problems[i].ToString() + ";" ;
+            }
+
+            return problems;
+        }
+
         public override string ToString()
         {
-            return patientName; // Display the Name property in the ListBox
+            return patientName + " (Note " + noteId + ")"; // Display the Name property in the ListBox
         }
     }
 }
