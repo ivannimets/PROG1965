@@ -61,13 +61,13 @@ namespace Assignment_3
         {
             if (heartRate > 100)
             {
-                return $"HR: {heartRate} BPM (HIGH)";
+                return $"HR: {heartRate} bpm (HIGH)";
             }
             if (heartRate < 60)
             {
-                return $"HR: {heartRate} BPM (LOW)";
+                return $"HR: {heartRate} bpm (LOW)";
             }
-            return $"HR: {heartRate} BPM";
+            return $"HR: {heartRate} bpm";
         }
 
         private static void CheckForRespiratoryRate(string notes, ListBox vitalsListBox)
