@@ -154,8 +154,8 @@ namespace Assignment_3
                 ClearFields();
                 listBoxNotes.DataSource = new List<Note>();
                 listBoxNotes.DataSource = NoteManager.Notes;
-                listBoxNotes.SelectedIndex = -1;
-                ChangeMode("awaiting note mode");
+                listBoxNotes.SelectedIndex = listBoxNotes.Items.Count - 1;
+                lblMessage.Text = "Note was added.";
             }
             catch (Exception ex)
             {
@@ -195,6 +195,7 @@ namespace Assignment_3
                 ValidationHelper.IsValidProblem(txtNewProblem.Text);
                 listBoxProblems.Items.Add(txtNewProblem.Text);
                 txtNewProblem.Text = "";
+                lblMessage.Text = "Problem was added.";
             }
             catch (Exception ex)
             {
@@ -220,11 +221,12 @@ namespace Assignment_3
                 }
 
                 NoteManager.UpdateNote(noteId, patientName, dateOfBirth, notes, problems);
-                ClearFields();
+                //ClearFields();
                 listBoxNotes.DataSource = new List<Note>();
                 listBoxNotes.DataSource = NoteManager.Notes;
-                listBoxNotes.SelectedIndex = -1;
-                ChangeMode("awaiting note mode");
+                //listBoxNotes.SelectedIndex = -1;
+                //ChangeMode("awaiting note mode");
+                lblMessage.Text = "Note was updated.";
             }
             catch (Exception ex)
             {
@@ -245,6 +247,7 @@ namespace Assignment_3
                 listBoxNotes.DataSource = NoteManager.Notes;
                 listBoxNotes.SelectedIndex = -1;
                 ChangeMode("awaiting note mode");
+                lblMessage.Text = "Note was deleted.";
             }
             catch (Exception ex)
             {
@@ -257,6 +260,10 @@ namespace Assignment_3
             if (listBoxProblems.SelectedIndex != -1)
             {
                 listBoxProblems.Items.Remove(listBoxProblems.SelectedItem);
+                lblMessage.Text = "Problem was removed.";
+            } else
+            {
+                lblMessage.Text = "Error, problem was not selected!";
             }
         }
     }

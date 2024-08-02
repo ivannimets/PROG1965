@@ -56,7 +56,7 @@ namespace Assignment_3
                     record += Notes[i].GetPatientName().ToString() + "|";
                     record += Notes[i].GetDateOfBirth().ToString() + "|";
                     record += Notes[i].GetNotes().Replace("\n", "~") + "|";
-                    record += Notes[i].GetProblemsAsString() + "|";
+                    record += Notes[i].GetProblemsAsString();
 
                     writer.WriteLine(record);
                 }

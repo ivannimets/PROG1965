@@ -35,13 +35,13 @@ namespace Assignment_3
         {
             if (systolic < 90 && diastolic < 60)
             {
-                return $"BP: {systolic}/{diastolic} (LOW)";
+                return $"BP: {systolic}/{diastolic} mmHg (LOW)";
             }
             if (systolic > 130 && diastolic > 80) 
             {
-                return $"BP: {systolic}/{diastolic} (High)";
+                return $"BP: {systolic}/{diastolic} mmHg (High)";
             }
-                return $"BP: {systolic}/{diastolic}";
+                return $"BP: {systolic}/{diastolic} mmHg";
         }
 
         private static void CheckForHeartRate(string notes, ListBox vitalsListBox) // check listbox for matching regex string
@@ -85,20 +85,20 @@ namespace Assignment_3
 
         private static string UpdaterespiratoryRateString(int respiratory)
         {
-            if (respiratory > 100)
+            if (respiratory > 16)
             {
-                return $"RR: {respiratory} (HIGH)";
+                return $"RR: {respiratory} (HIGH) bpm";
             }
-            if (respiratory < 60)
+            if (respiratory < 12)
             {
-                return $"RR: {respiratory} (LOW)";
+                return $"RR: {respiratory} (LOW) bpm";
             }
-            return $"RR: {respiratory}";
+            return $"RR: {respiratory} bpm";
         }
 
         private static void CheckForTemperature(string notes, ListBox vitalsListBox)
         {
-            string TempPattern = @"T:?\s(\d{2,3})";
+            string TempPattern = @"T:?\s(\d{2}.?\d?)";
             Regex TempRegex = new Regex(TempPattern, RegexOptions.IgnoreCase);
             MatchCollection match = TempRegex.Matches(notes);
 
@@ -112,13 +112,13 @@ namespace Assignment_3
         {
             if (temp > 37.2)
             {
-                return $"Temp: {temp} (HIGH)";
+                return $"Temp: {temp} C (HIGH)";
             }
             if (temp < 36.5)
             {
-                return $"Temp: {temp} (LOW)";
+                return $"Temp: {temp} C (LOW)";
             }
-            return $"Temp: {temp}";
+            return $"Temp: {temp} C";
         }
     }
 }
